@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <changeSet id="1" author="emil piękoś">
+        <createTable tableName="employee">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="name" type="varchar(255)" />
+            <column name="base_salary" type="decimal" />
+            <column name="is_hired" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="emil piękoś">
+        <createTable tableName="work_done">
+            <column name="id" type="bigint" autoIncrement="true">
+            <constraints primaryKey="true"/>
+            </column>
+            <column name="employee_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="time_in_minutes" type="int" />
+            <column name="additional" type="boolean" />
+            <column name="date" type="datetime" generationType="date"/>
+        </createTable>
+
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="work_done"
+                                 constraintName="fk_emplotee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+    </changeSet>
+
+</databaseChangeLog>
