@@ -1,9 +1,6 @@
 package pl.javastart.bonuscalc.employee;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -16,6 +13,16 @@ public class Employee {
     private String name;
 
     private BigDecimal baseSalary;
+
+    private boolean isHired;
+
+    public boolean isHired() {
+        return isHired;
+    }
+
+    public void setHired(boolean hired) {
+        isHired = hired;
+    }
 
     public Long getId() {
         return id;

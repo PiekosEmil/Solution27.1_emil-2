@@ -2,7 +2,7 @@ package pl.javastart.bonuscalc.work;
 
 import pl.javastart.bonuscalc.employee.Employee;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
