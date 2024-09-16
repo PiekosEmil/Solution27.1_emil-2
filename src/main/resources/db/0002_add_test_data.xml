@@ -1,0 +1,108 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="3" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Jan Kowalski" />
+            <column name="base_salary" value="5000" />
+            <column name="is_hired" value="1" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="4" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Aleksander Nowak" />
+            <column name="base_salary" value="4500" />
+            <column name="is_hired" value="0" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="5" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Patrycja Rogalska" />
+            <column name="base_salary" value="7000" />
+            <column name="is_hired" value="1" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="6" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Kamil Wojciechowski" />
+            <column name="base_salary" value="6000" />
+            <column name="is_hired" value="0" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="7" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Magdalena Robaczewska" />
+            <column name="base_salary" value="8000" />
+            <column name="is_hired" value="1" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="8" author="emil piękoś">
+        <insert tableName="employee">
+            <column name="name" value="Teresa Chwalipięta" />
+            <column name="base_salary" value="2500" />
+            <column name="is_hired" value="0" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="9" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="1" />
+            <column name="time_in_minutes" value="140" />
+            <column name="additional" value="0" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="10" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="1" />
+            <column name="time_in_minutes" value="90" />
+            <column name="additional" value="1" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="11" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="3" />
+            <column name="time_in_minutes" value="100" />
+            <column name="additional" value="0" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="12" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="3" />
+            <column name="time_in_minutes" value="60" />
+            <column name="additional" value="1" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="13" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="5" />
+            <column name="time_in_minutes" value="90" />
+            <column name="additional" value="0" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="14" author="emil piękoś">
+        <insert tableName="work_done">
+            <column name="employee_id" value="5" />
+            <column name="time_in_minutes" value="120" />
+            <column name="additional" value="1" />
+            <column name="date" value="2024-09-16" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
