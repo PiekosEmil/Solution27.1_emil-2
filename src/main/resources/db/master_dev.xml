@@ -7,4 +7,5 @@
 
     <include file="/db/0001_create_tables.xml"/>
     <include file="/db/0002_add_test_data.xml"/>
+    <include file="/db/0003_add_column_and_data.xml"/>
 </databaseChangeLog>

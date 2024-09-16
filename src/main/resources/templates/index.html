@@ -28,11 +28,13 @@
     <table class="table  mt-4">
         <thead>
             <tr>
-                <th>Pracownik
+                <th>Pracownik</th>
                 <th>Czy jest zatrudniony?</th>
                 <th>Podstawowa wypłata</th>
                 <th>Premia</th>
                 <th>Wypłata z premią</th>
+                <th>Adres e-mail</th>
+                <th>Newsletter</th>
             </tr>
         </thead>
         <tbody>
@@ -43,6 +45,9 @@
             <td th:text="|${employeeWithBonus.employee.baseSalary} zł|"></td>
             <td th:text="|${employeeWithBonus.bonus} zł|"></td>
             <td th:text="|${employeeWithBonus.totalSalary} zł|"></td>
+            <td th:text="${employeeWithBonus.employee.getEmailAddress()}"></td>
+            <td th:if="${employeeWithBonus.employee.isNewsletter()}">TAK</td>
+            <td th:unless="${employeeWithBonus.employee.isNewsletter()}">NIE</td>
         </tr>
         </tbody>
     </table>

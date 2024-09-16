@@ -1,0 +1,47 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="15" author="emil piękoś">
+        <addColumn tableName="employee">
+            <column name="email_address" type="varchar(255)" />
+            <column name="newsletter" type="boolean" />
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="16" author="emil piękoś">
+        <update tableName="employee">
+            <column name="email_address" value="jankowalski@it.pl" />
+            <column name="newsletter" value="1" />
+            <where>id=1</where>
+        </update>
+        <update tableName="employee">
+            <column name="email_address" value="an@it.org" />
+            <column name="newsletter" value="0" />
+            <where>id=2</where>
+        </update>
+        <update tableName="employee">
+            <column name="email_address" value="patka1996@onet.eu" />
+            <column name="newsletter" value="1" />
+            <where>id=3</where>
+        </update>
+        <update tableName="employee">
+            <column name="email_address" value="wojciech99@outluk.ru" />
+            <column name="newsletter" value="0" />
+            <where>id=4</where>
+        </update>
+        <update tableName="employee">
+            <column name="email_address" value="robaczekk@it.pl" />
+            <column name="newsletter" value="1" />
+            <where>id=5</where>
+        </update>
+        <update tableName="employee">
+            <column name="email_address" value="pochwala_mala@robo.pl" />
+            <column name="newsletter" value="0" />
+            <where>id=6</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>
